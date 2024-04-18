@@ -1,5 +1,3 @@
-version: '3.7' # Use a suitable version for your requirements
-
 services:
   jenkins-docker:
     container_name: jenkins-docker
@@ -20,7 +18,7 @@ services:
 
   jenkins-blueocean:
     container_name: jenkins-blueocean
-    image: myjenkins-blueocean:2.440.1
+    image: myjenkins-blueocean:2.440.2
     restart: on-failure
     environment:
       DOCKER_HOST: "tcp://docker:2376"
