@@ -12,11 +12,6 @@ Build like this (below) being cognizant of the version. The version we care abou
 docker build --file Dockerfile.jenkins -t myjenkins-blueocean:2.440.1 .
 ```
 
-docker run --name jenkins-docker --rm --detach \
-  --privileged --network jenkins --network-alias docker \
-  --env DOCKER_TLS_CERTDIR=/certs \
-  --volume jenkins-docker-certs:/certs/client \
-  --volume jenkins-data:/var/jenkins_home \
-  --publish 2376:2376 \
-  docker:dind --storage-driver overlay2
-
+```shell
+docker compose up -d
+```
