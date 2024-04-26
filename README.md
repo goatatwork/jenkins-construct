@@ -9,7 +9,7 @@ There are better ways to update than just shutting down the docker compose proje
 Build like this (below) being cognizant of the version. The version we care about is in the FROM line in the Dockerfile.
 
 ```shell
-docker build --file Dockerfile.jenkins -t myjenkins-blueocean:2.440.1 .
+docker build --file Dockerfile.jenkins -t myjenkins-blueocean:2.440.3 .
 ```
 
 ```shell
