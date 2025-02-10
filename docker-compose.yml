@@ -18,7 +18,7 @@ services:
 
   jenkins-blueocean:
     container_name: jenkins-blueocean
-    image: myjenkins-blueocean:2.462.3
+    image: myjenkins-blueocean:2.492.1
     restart: on-failure
     environment:
       DOCKER_HOST: "tcp://docker:2376"
@@ -36,10 +36,12 @@ services:
 networks:
   jenkins:
     name: jenkins
+    external: true
 
 volumes:
   jenkins-docker-certs:
     name: jenkins-docker-certs
+    external: true
   jenkins-data:
     name: jenkins-data
-
+    external: true
